@@ -1202,7 +1202,8 @@ After preprocessing the result is:
 The wrapped processor can have a `on_failure` definition.
 For example, the `id` field may not exist on all person objects.
 Instead of failing the index request, you can use an `on_failure`
-block to send the document to the 'failure_index' index for later inspection:
+block to send the document to the '
+' index for later inspection:
 
 [source,js]
 --------------------------------------------------
@@ -1215,8 +1216,8 @@ block to send the document to the 'failure_index' index for later inspection:
         "on_failure" : [
           {
             "set" : {
-              "field", "_index",
-              "value", "failure_index"
+              "field": "_index",
+              "value": "failure_index"
             }
           }
         ]
